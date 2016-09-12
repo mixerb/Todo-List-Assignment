@@ -1,3 +1,13 @@
+<!--/**********************************************************
+* Author: Kevin Barcoe
+* Assignment: WE4.1 Mobile Web Applications 2, Digital Skills Academy
+* Student ID: D15128527
+* Date : 12/09/2016
+* Ref: 
+* Ref:
+* Ref: 
+***********************************************************/-->
+
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
@@ -16,40 +26,36 @@
         <platform name="android">
             <allow-intent href="market:*" />
         </platform>
-	<!--specify that we do not want any permissions to be added to the app-->
+<!-- Use the preference element to customize app and platform. -->
     	<preference name="permissions"  value="none"/>
-    	<!-- Use the preference element to customize your app and platform. -->
-   	<preference name="target-device"              value="universal" />      <!--universal-for all devices-->
+    	<preference name="target-device"    value="universal" />      
     	<preference name="SplashScreen" value="splash" />
      	<!-- Core plugins -->
 
     	<gap:plugin name="org.apache.cordova.device" />
     	<gap:plugin name="org.apache.cordova.splashscreen" />
-    	
-   	<!--Define an app splash screen for each platform. -->
+
 	
             <!-- Define app icon for each platform. -->
-<icon src="icon.png" />
-<icon platform="android" qualifier="ldpi" src="res/icons/android/icon-36-ldpi.png"/>
-<icon platform="android" qualifier="mdpi" src="res/icons/android/icon-48-mdpi.png"/>
-<icon platform="android" qualifier="hdpi" src="res/icons/android/icon-72-hdpi.png"/>
-<icon platform="android" qualifier="xhdpi" src="res/icons/android/icon-96-xhdpi.png"/>
-<icon platform="android" qualifier="xxhdpi" src="res/icons/android/icon-144-xxhdpi.png"/>
-<icon platform="android" qualifier="xxxhdpi" src="res/icons/android/icon-192-xxxhdpi.png"/>
+    <icon src="icon.png" />
+    <icon platform="android" qualifier="ldpi" src="res/icons/android/icon-36-ldpi.png"/>
+    <icon platform="android" qualifier="mdpi" src="res/icons/android/icon-48-mdpi.png"/>
+    <icon platform="android" qualifier="hdpi" src="res/icons/android/icon-72-hdpi.png"/>
+    <icon platform="android" qualifier="xhdpi" src="res/icons/android/icon-96-xhdpi.png"/>
+    <icon platform="android" qualifier="xxhdpi" src="res/icons/android/icon-144-xxhdpi.png"/>
+    <icon platform="android" qualifier="xxxhdpi" src="res/icons/android/icon-192-xxxhdpi.png"/>
+    <icon platform="wp8" src="res/icons/wp8/ApplicationIcon.png" width="99" height="99" />
+    <icon platform="wp8" src="res/icons/wp8/Background.png" width="159" height="159" />
+    <icon platform="windows" src="res/icons/windows8/logo.png" width="150" height="150" />
+    <icon platform="windows" src="res/icons/windows8/smalllogo.png" width="30" height="30" />
+    <icon platform="windows" src="res/icons/windows8/storelogo.png" width="50" height="50" />
 
-    <!--Define an app splash screen for each platform. -->
-<gap:splash src="splash.png" />
-<splash platform="android" qualifier="ldpi" src="res/screens/android/screen-ldpi-portrait.png" />
-<splash platform="android" qualifier="mdpi" src="res/screens/android/screen-mdpi-portrait.png" />
-<splash platform="android" qualifier="hdpi" src="res/screens/android/screen-hdpi-portrait.png" />
-<splash platform="android" qualifier="xhdpi" src="res/screens/android/screen-xhdpi-portrait.png" />
-
-<icon platform="wp8" src="res/icons/wp8/ApplicationIcon.png" width="99" height="99" />
-<icon platform="wp8" src="res/icons/wp8/Background.png" width="159" height="159" />
-
-<icon platform="windows" src="res/icons/windows8/logo.png" width="150" height="150" />
-<icon platform="windows" src="res/icons/windows8/smalllogo.png" width="30" height="30" />
-<icon platform="windows" src="res/icons/windows8/storelogo.png" width="50" height="50" />
+        <!--Define an app splash screen for each platform. -->
+    <gap:splash src="splash.png" />
+    <splash platform="android" qualifier="ldpi" src="res/screens/android/screen-ldpi-portrait.png" />
+    <splash platform="android" qualifier="mdpi" src="res/screens/android/screen-mdpi-portrait.png" />
+    <splash platform="android" qualifier="hdpi" src="res/screens/android/screen-hdpi-portrait.png" />
+    <splash platform="android" qualifier="xhdpi" src="res/screens/android/screen-xhdpi-portrait.png" />
     	
 
 </widget>
