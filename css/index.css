@@ -23,7 +23,7 @@ time, mark, audio, video{
 }
 html{
 -webkit-tap-highlight-color: rgba(0,0,0,0); /*removes the highlight blue color when clicking on elements on mobile*/
--webkit-text-size-adjust: 100%; /*stops the font from stretching on the iphone on orientation change*/
+-webkit-text-size-adjust: 100%; 
 height: 100%;
 }
 
@@ -65,7 +65,16 @@ padding: 5px 1% 2px 2%;
 	padding-bottom: 1px;
 	padding-left: 20px;
 	border-radius: 5px;
+}
 
+.accordionHeader{
+	padding-left: 20px;
+}
+
+.accordionContainer{
+	position: relative;
+	padding-right: 5%;
+	
 }
 /******************************************************/
 /*styling for the header navigation menu*/
@@ -79,19 +88,16 @@ position: fixed;
 top: 0px;
 left: 0px;
 width: 100%; 
-/*add a high z-index value so that this fixed header stays on top of everything else on the page*/ 
 z-index: 10; 
 }
 
 .header_menu_item{
 position: relative; 
 float: left; 
-/*there are four menu items so make them 25% width of the header*/
 width: 50%;
 height: 48px;
 }
 
-/*the following class is applied to the anchor tags in the header navigation*/
 .header_menu_link{
 	background-color: #2e6da4;
 position: relative;
@@ -102,9 +108,6 @@ width: 100%;
 height: 48px;
 font-size: 24px;
 color: white;
-/*specify a box sizing of border-box so that the width and height properties (and min/max properties) 
- *includes content, padding and border, but not the margin
- */
 -webkit-box-sizing:	border-box;
 -moz-box-sizing:	border-box; 
 box-sizing:		border-box;  
@@ -133,16 +136,6 @@ padding: 10px 0px;
 			text-decoration: line-through;
 			color: red;
 		}
-
-.accordionHeader{
-	padding-left: 20px;
-}
-
-.accordionContainer{
-	position: relative;
-	padding-right: 5%;
-	
-}
 
 /********************************************/
 /*button styling*/
