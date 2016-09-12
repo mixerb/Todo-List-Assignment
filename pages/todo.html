@@ -1,0 +1,61 @@
+<!--/**********************************************************
+* Author: Kevin Barcoe
+* Assignment: WE4.1 Mobile Web Applications 2, Digital Skills Academy
+* Student ID: D15128527
+* Date : 12/09/2016
+* Ref: 
+* Ref:
+* Ref: 
+***********************************************************/-->
+
+<!-- connect to controller -->
+<div id="todoWell" class="well" data-ng-controller="todoController">
+	<form  data-ng-submit="MakeNewTask()">
+    <!-- Add to list of Tasks -->
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" class="form-control" id="title" data-ng-model="newTask.title" required />
+        </div>
+        <div class="form-group">
+          <label for="Description">Description:</label>
+          <textarea class="form-control" rows="5" id="Description" data-ng-model="newTask.description"></textarea>
+        </div>
+        <br>
+        <button id="add" class='btn btn-info' data-ng-disabled="frm.$invalid">Add Task</button>
+    </form>   
+</div>
+<!-- Delete Button -->
+<p>You've got <span>{{getTotalTodos()}}</span> things to do</p>
+<div id="Delbutton">
+    <button class='btn btn-primary' data-ng-click="deleteTask()">Delete Tasks</button>
+</div>
+ <!-- list-->
+<div id="todoList">
+     
+    <!-- http://stackoverflow.com/questions/20411771/checkbox-in-header-for-angular-ui-bootstrap-accordion-directive
+    
+    https://angular-ui.github.io/bootstrap/#/accordion
+    -->
+    <div id="accordionWell">
+        <div class="accordionContainer">
+            <h4><center> Todos</center></h4>
+            <uib-accordion>
+
+                <div uib-accordion-group class="panel-default" ng-repeat="currentTask in $storage.tasks" is-open="status.open">
+                  <uib-accordion-heading>
+                  <div class="accordionHeader">
+
+                  <input type="checkbox" data-ng-model="currentTask.done" ng-checked="group.checked" 
+                  ng-click="checkboxClick(group, $event);$event.stopPropagation();"/> 
+
+                  <span data-ng-class="{'done':currentTask.done}" data-ng-bind="currentTask.title">{{ currentTask.title}}</span> 
+
+                  <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                  </div>
+                  </uib-accordion-heading>
+                  {{currentTask.description}}
+                </div>  
+            </uib-accordion>
+        </div>
+    </div>
+</div>
