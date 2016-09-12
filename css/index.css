@@ -1,0 +1,157 @@
+/**********************************************************
+* Author: Kevin Barcoe
+* Assignment: WE4.1 Mobile Web Applications 2, Digital Skills Academy
+* Student ID: D15128527
+* Date : 12/09/2016
+* Ref: 
+* Ref:
+* Ref: 
+***********************************************************/
+/*reset all html elements to 0 margin and padding etc*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, address, em, img, q,small, strong, b, i,
+ol, ul, li,form, label, table, caption,tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+}
+html{
+-webkit-tap-highlight-color: rgba(0,0,0,0); /*removes the highlight blue color when clicking on elements on mobile*/
+-webkit-text-size-adjust: 100%; /*stops the font from stretching on the iphone on orientation change*/
+height: 100%;
+}
+
+/*remove the default list styling from all uls*/
+ul{
+list-style: none;
+}
+/*remove the default line from anchor text*/
+a, a:hover, a:active, a:visited {
+    text-decoration:none;
+}
+
+/**************************************/
+.container{
+position: relative;
+padding: 56px 2% 0px 2%; 
+width: 96%;
+overflow: hidden;
+z-index: 4;
+}
+
+.intro_paragraph{
+width: 97%;
+text-align: center;
+padding: 5px 1% 2px 2%;
+}
+#todoWell{
+	background-color: #e8f9f9;
+	margin-bottom: 10px;
+	padding-bottom: 40px;
+}
+#accordionWell{
+
+	background-color: #e8f9f9;
+	margin-left: 35px;
+	width: 80%;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 1px;
+	padding-left: 20px;
+	border-radius: 5px;
+
+}
+/******************************************************/
+/*styling for the header navigation menu*/
+header{
+width: 100%;
+display: block;
+}
+
+.header_nav{   	
+position: fixed;
+top: 0px;
+left: 0px;
+width: 100%; 
+/*add a high z-index value so that this fixed header stays on top of everything else on the page*/ 
+z-index: 10; 
+}
+
+.header_menu_item{
+position: relative; 
+float: left; 
+/*there are four menu items so make them 25% width of the header*/
+width: 50%;
+height: 48px;
+}
+
+/*the following class is applied to the anchor tags in the header navigation*/
+.header_menu_link{
+	background-color: #2e6da4;
+position: relative;
+display:block;  
+padding: 10px 0px 5px 0px;
+text-align: center;
+width: 100%;
+height: 48px;
+font-size: 24px;
+color: white;
+/*specify a box sizing of border-box so that the width and height properties (and min/max properties) 
+ *includes content, padding and border, but not the margin
+ */
+-webkit-box-sizing:	border-box;
+-moz-box-sizing:	border-box; 
+box-sizing:		border-box;  
+cursor: pointer;
+}
+
+.header_menu_link:active, .header_menu_link:hover, .header_menu_link.current{
+
+background: #337AB7;
+
+}
+
+/*******************************************************/
+/*styling for the get started section on the home "page"/view.
+ * to center the button that it contains*/
+#get_started{
+width: 120px;
+margin: 10px auto;
+padding: 10px 0px;
+}
+
+/********************************************/
+/*checkbox red styling*/
+
+.done{
+			text-decoration: line-through;
+			color: red;
+		}
+
+.accordionHeader{
+	padding-left: 20px;
+}
+
+.accordionContainer{
+	position: relative;
+	padding-right: 5%;
+	
+}
+
+/********************************************/
+/*button styling*/
+
+
+#add{
+	float: right;
+}
+#Delbutton{
+	padding-left: 70%;
+	padding-bottom: 10px;
+}
